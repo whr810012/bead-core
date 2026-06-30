@@ -1,0 +1,55 @@
+{
+  "name": "@dandan/bead-core",
+  "version": "0.1.0",
+  "description": "蛋蛋拼豆核心库：图片转拼豆图纸，CIEDE2000 感知配色",
+  "type": "module",
+  "license": "MIT",
+  "author": "蛋蛋",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whr810012/bead-core.git"
+  },
+  "homepage": "https://github.com/whr810012/bead-core#readme",
+  "bugs": {
+    "url": "https://github.com/whr810012/bead-core/issues"
+  },
+  "keywords": [
+    "perler-beads",
+    "fuse-beads",
+    "pixel-art",
+    "pattern",
+    "ciede2000",
+    "color-quantization",
+    "bead",
+    "拼豆",
+    "蛋蛋拼豆"
+  ],
+  "sideEffects": false,
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
