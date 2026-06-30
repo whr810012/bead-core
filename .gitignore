@@ -4,3 +4,8 @@ dist/
 .DS_Store
 coverage/
 *.tgz
+
+# tsc 产物只应出现在 dist/
+src/**/*.js
+src/**/*.d.ts
+src/**/*.d.ts.map
