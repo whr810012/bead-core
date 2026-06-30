@@ -18,9 +18,11 @@
     "README.md",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
     "prepublishOnly": "npm run test && npm run build",
     "test": "vitest run",
     "test:watch": "vitest"
