@@ -1,5 +1,5 @@
 {
-  "name": "@dandan/bead-core",
+  "name": "@wangdandan810012/bead-core",
   "version": "0.1.0",
   "description": "蛋蛋拼豆核心库：图片转拼豆图纸，CIEDE2000 感知配色",
   "type": "module",

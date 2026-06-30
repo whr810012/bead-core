@@ -1,4 +1,4 @@
-# @dandan/bead-core
+# @wangdandan810012/bead-core
 
 蛋蛋拼豆核心算法库 — 将 RGBA 像素图转换为拼豆色号网格，支持 CIEDE2000 感知配色、区域合并、背景识别与编辑工具。
 
@@ -9,7 +9,7 @@
 ## 安装
 
 ```bash
-npm install @dandan/bead-core
+npm install @wangdandan810012/bead-core
 ```
 
 本包为 **ESM** 模块，请在 `package.json` 中设置 `"type": "module"`，或在 TypeScript 中使用 `"module": "ESNext"`。
@@ -21,7 +21,7 @@ npm install @dandan/bead-core
 每个色号包含唯一 ID、显示色值，以及各品牌对应的豆号：
 
 ```typescript
-import type { PaletteEntry } from '@dandan/bead-core'
+import type { PaletteEntry } from '@wangdandan810012/bead-core'
 
 const palette: PaletteEntry[] = [
   {
@@ -68,7 +68,7 @@ import {
   trimGrid,
   type PaletteEntry,
   type BrandSystem,
-} from '@dandan/bead-core'
+} from '@wangdandan810012/bead-core'
 
 // 1. 准备色板与像素（见下方「浏览器 / Node 读取图片」）
 const palette: PaletteEntry[] = [/* ... */]
@@ -113,7 +113,7 @@ console.log(stats) // [{ paletteId, hex, count, displayCode }, ...]
 ## 浏览器：从 Canvas 读取像素
 
 ```typescript
-import { runPipeline, type PaletteEntry } from '@dandan/bead-core'
+import { runPipeline, type PaletteEntry } from '@wangdandan810012/bead-core'
 
 async function imageToGrid(imageUrl: string, palette: PaletteEntry[]) {
   const img = new Image()
@@ -147,7 +147,7 @@ Node 本身不提供图像解码，需配合 `sharp` 等库：
 
 ```typescript
 import sharp from 'sharp'
-import { runPipeline, type PaletteEntry } from '@dandan/bead-core'
+import { runPipeline, type PaletteEntry } from '@wangdandan810012/bead-core'
 
 async function fileToGrid(filePath: string, palette: PaletteEntry[]) {
   const { data, info } = await sharp(filePath)
@@ -203,7 +203,7 @@ import {
   markExternalBackground,
   limitGridColors,
   remapExcludedColors,
-} from '@dandan/bead-core'
+} from '@wangdandan810012/bead-core'
 
 // 仅做图片 → 网格转换
 let grid = convertImageToPattern(pixels, width, height, {
@@ -234,7 +234,7 @@ import {
   flipGridHorizontal,
   flipGridVertical,
   cloneGrid,
-} from '@dandan/bead-core'
+} from '@wangdandan810012/bead-core'
 
 // 油漆桶：填充同色连通区域
 grid = fillRegion(grid, row, col, 'red-01', '#E74C3C')
@@ -263,7 +263,7 @@ import {
   countTotalBeads,
   countCompleted,
   getConnectedRegions,
-} from '@dandan/bead-core'
+} from '@wangdandan810012/bead-core'
 
 // 各色号用量（按 count 降序）
 const stats = computeColorStats(grid, 'MARD', codeLookup)
